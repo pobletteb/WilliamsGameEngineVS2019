@@ -47,4 +47,9 @@
       <Filter>Resources</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\ship.png">
+      <Filter>Resources</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
