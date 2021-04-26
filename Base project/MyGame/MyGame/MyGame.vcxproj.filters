@@ -15,6 +15,7 @@
     </ClCompile>
     <ClCompile Include="MyGame.cpp" />
     <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="ship.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\AnimatedSprite.h">
