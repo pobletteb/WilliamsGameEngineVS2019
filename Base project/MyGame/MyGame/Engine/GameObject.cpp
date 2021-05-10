@@ -35,3 +35,4 @@ void GameObject::setCollisionCheckEnabled(bool isCollisionCheckEnabled)
 {
 	isCollisionCheckEnabled_ = isCollisionCheckEnabled;
 }
+

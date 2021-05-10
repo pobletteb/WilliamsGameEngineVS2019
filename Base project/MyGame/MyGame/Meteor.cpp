@@ -4,6 +4,7 @@ const float SPEED = 0.25f;
 
 Meteor::Meteor(sf::Vector2f pos)
 {
+	setCollisionCheckEnabled(true);
 	sprite_.setTexture(GAME.getTexture("Resources/meteor.png"));
 	sprite_.setPosition(pos);
 	assignTag("meteor");
@@ -32,9 +33,9 @@ sf::FloatRect Meteor::getCollisionRect()
 {
 	return sprite_.getGlobalBounds();
 }
-void Meteor::handleCollision(GameObject& otherGameobject)
+void Meteor::handleCollision(GameObject& otherGameObject)
 {
-	if (otherGameObject.hasTage("laser"))
+	if (otherGameObject.hasTag("laser"))
 	{
 		otherGameObject.makeDead();
 	}
