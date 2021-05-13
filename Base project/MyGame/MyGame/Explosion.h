@@ -14,4 +14,5 @@ public:
 private:
 	void SetUpExplosionAnimation();
 };
-typedef std::shared_ptr<Explosion> Explosionptr;
+
+typedef std::shared_ptr<Explosion> ExplosionPtr;
