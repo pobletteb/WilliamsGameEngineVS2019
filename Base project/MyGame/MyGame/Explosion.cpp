@@ -6,6 +6,10 @@ Explosion::Explosion(sf::Vector2f pos)
 	AnimatedSprite::setTexture(GAME.getTexture("Resources/explosion-spritesheet.png"));
 	SetUpExplosionAnimation();
 	playAnimation("explosion", AnimationMode::OnceForwards);
+
+	boom_.setBuffer(GAME.getSoundBuffer("resources/boom.wav"));
+	boom_.play();
+
 }
 
 void Explosion::SetUpExplosionAnimation()
@@ -22,6 +26,8 @@ void Explosion::SetUpExplosionAnimation()
 	frames.push_back(sf::IntRect(512, 0, 64, 64));
 	
 	addAnimation("explosion", frames);
+
+	
 }
 
 void Explosion::update(sf::Time& elapsed)

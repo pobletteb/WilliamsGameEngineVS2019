@@ -14,6 +14,7 @@ public:
 	sf::FloatRect getCollisionRect();
 private:
 	sf::Sprite sprite_;
+	sf::Sound boom_;
 
 };
 typedef std::shared_ptr<Laser> LaserPtr;
