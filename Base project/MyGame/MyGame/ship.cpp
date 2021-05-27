@@ -3,7 +3,7 @@
 
 float xvelocity = 0;
 float yvelocity = 0;
-const float terminalvelocity = 4;
+const float terminalvelocity = 10;
 const float acceleration = 0.2;
 const float drag = 0.05;
 int window_length = 0;
