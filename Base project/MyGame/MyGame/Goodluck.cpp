@@ -3,7 +3,7 @@
 #include <sstream>
 //#pragma warning(disable : 4996)
 
-int timer = 10000;
+int timer = 5000;
 
 Goodluck::Goodluck(sf::Vector2f pos)
 {
@@ -28,10 +28,10 @@ void Goodluck::draw()
 
 void Goodluck::update(sf::Time& elapsed)
 {
-	GameScene& scene = (GameScene&)GAME.getCurrentScene();
-
-	std::stringstream stream;
-	stream << "Goodluck: " << scene.getScore();
-
-	text_.setString(stream.str());
+	int msElapsed = elapsed.asMilliseconds();
+	timer -= msElapsed;
+	if (timer <= 0)
+	{
+		makeDead();
+	}
 }

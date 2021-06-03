@@ -3,7 +3,7 @@
 
 float xvelocity = 0;
 float yvelocity = 0;
-const float terminalvelocity = 10;
+const float terminalvelocity = 8;
 const float acceleration = 0.2;
 const float drag = 0.05;
 int window_length = 0;
@@ -122,4 +122,22 @@ void Ship::update(sf::Time& elapsed)
 		GAME.getCurrentScene().addGameObject(laser);
 	}
 }
+/*
+void Ship::handleCollision(GameObject& otherGameObject)
+{
+	if (otherGameObject.hasTag("laser"))
+	{
+		otherGameObject.makeDead();
+	}
 
+	sf::Vector2f pos = sprite_.getPosition();
+	sf::FloatRect size = sprite_.getGlobalBounds();
+
+	makeDead();
+	ExplosionPtr explosion = std::make_shared<Explosion>(sf::Vector2f(pos.x + (size.width / 2), pos.y + (size.height / 2)));
+	GAME.getCurrentScene().addGameObject(explosion);
+	GameScene& scene = (GameScene&)GAME.getCurrentScene();
+
+	scene.increaseScore();
+}
+*/
